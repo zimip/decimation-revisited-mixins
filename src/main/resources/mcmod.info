@@ -1,0 +1,16 @@
+[
+{
+  "modid": "deci_revisited",
+  "name": "Decimation: Revisited",
+  "description": "Addon made specifically for Kovolska and Revisited.",
+  "version": "$version",
+  "mcversion": "$mcversion",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["zimip"],
+  "credits": "Scott, for Decimation.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

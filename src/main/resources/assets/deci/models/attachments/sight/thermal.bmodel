@@ -1,0 +1,160 @@
+
+
+  flamePos: 31.30002, -5, 0;
+  ejectPos: 0, 0, 0;
+  rhPos: -8.999995, 0.72, -2;
+  rhRot: 0, 0, 0;
+  lhPos: 4.700002, 7.12, 4.4;
+  lhRot: 0, 0, 0;
+  textureWidth = 64;
+  textureHeight = 32;
+  scopeGlass = new BeardieModelRenderer(this, 0, 0);
+  scopeGlass.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.10000000149011612, 0.8, 0.8);
+  scopeGlass.setRotationPoint(0.0500005F, -6.699998F, -0.3999999F);
+  scopeGlass.setRotation(0F, 0F, 0F);
+
+  scopeOverlay = new BeardieModelRenderer(this, 0, 0);
+  scopeOverlay.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.05, 0.8, 0.8);
+  scopeOverlay.setRotationPoint(0.04500039F, -6.699998F, -0.3999999F);
+  scopeOverlay.setRotation(0F, 0F, 0F);
+
+  scope1 = new BeardieModelRenderer(this, 0, 0);
+  scope1.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3.0, 0.5, 0.2);
+  scope1.setRotationPoint(1.7F, -4.699999F, 0.6F);
+  scope1.setRotation(0F, 0F, 0F);
+
+  scope2 = new BeardieModelRenderer(this, 0, 0);
+  scope2.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.3, 0.1);
+  scope2.setRotationPoint(2.999996F, -5.999998F, 0.3999999F);
+  scope2.setRotation(0F, 0F, 0F);
+
+  scope3 = new BeardieModelRenderer(this, 0, 0);
+  scope3.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.3, 0.1);
+  scope3.setRotationPoint(3.8F, -5.999998F, 0.3999999F);
+  scope3.setRotation(0F, 0F, 0F);
+
+  scope4 = new BeardieModelRenderer(this, 0, 0);
+  scope4.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 0.4, 0.1);
+  scope4.setRotationPoint(3.399997F, -5.099999F, 0.3999999F);
+  scope4.setRotation(0F, 0F, 0F);
+
+  scope5 = new BeardieModelRenderer(this, 0, 0);
+  scope5.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 0.5, 0.1);
+  scope5.setRotationPoint(3.399997F, -5.999998F, 0.3999999F);
+  scope5.setRotation(0F, 0F, 0F);
+
+  scope6 = new BeardieModelRenderer(this, 0, 0);
+  scope6.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 0.4, 0.5);
+  scope6.setRotationPoint(2.899996F, -6.099998F, 0.15F);
+  scope6.setRotation(0F, 0F, 0F);
+
+  scope7 = new BeardieModelRenderer(this, 0, 0);
+  scope7.addShape(0F,0F,0F, new float[][]{{0F, 0F, -0.2F}, {0F, 0F, -0.2F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0.2F}, {0F, 0F, 0.2F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4.5000000014901165, 0.1, 0.8);
+  scope7.setRotationPoint(3.129244E-07F, -5.899998F, -0.3999999F);
+  scope7.setRotation(0F, 0F, 0F);
+
+  scope8 = new BeardieModelRenderer(this, 0, 0);
+  scope8.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, -0.2F}, {0F, 0F, -0.2F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0.2F}, {0F, 0F, 0.2F}}, 4.5000000014901165, 0.1, 0.8);
+  scope8.setRotationPoint(3.129244E-07F, -6.799998F, -0.3999999F);
+  scope8.setRotation(0F, 0F, 0F);
+
+  scope9 = new BeardieModelRenderer(this, 0, 0);
+  scope9.addShape(0F,0F,0F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4.5000000014901165, 0.8, 0.1);
+  scope9.setRotationPoint(3.129244E-07F, -6.699998F, 0.4F);
+  scope9.setRotation(0F, 0F, 0F);
+
+  scope10 = new BeardieModelRenderer(this, 0, 0);
+  scope10.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}}, 4.5000000014901165, 0.8, 0.1);
+  scope10.setRotationPoint(3.129244E-07F, -6.699998F, -0.4999998F);
+  scope10.setRotation(0F, 0F, 0F);
+
+  scope11 = new BeardieModelRenderer(this, 46, 30);
+  scope11.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.1, 0.8, 0.8);
+  scope11.setRotationPoint(4.349999F, -6.699998F, -0.3999999F);
+  scope11.setRotation(0F, 0F, 0F);
+
+  scope4_2 = new BeardieModelRenderer(this, 0, 0);
+  scope4_2.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0.15F, 0F}, {0F, 0.15F, 0F}}, 4.5, 0.15, 0.15);
+  scope4_2.setRotationPoint(3.129244E-07F, -6.049998F, 0.25F);
+  scope4_2.setRotation(0F, 0F, 0F);
+
+  scope5_2 = new BeardieModelRenderer(this, 0, 0);
+  scope5_2.addShape(0F,0F,0F, new float[][]{{0F, 0F, -0.15F}, {0F, 0F, -0.15F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4.5, 0.15, 0.15);
+  scope5_2.setRotationPoint(3.129244E-07F, -6.699998F, -0.3999998F);
+  scope5_2.setRotation(0F, 0F, 0F);
+
+  scope6_2 = new BeardieModelRenderer(this, 0, 0);
+  scope6_2.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0.15F}, {0F, 0F, 0.15F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4.5, 0.15, 0.15);
+  scope6_2.setRotationPoint(3.129244E-07F, -6.699998F, 0.25F);
+  scope6_2.setRotation(0F, 0F, 0F);
+
+  scope7_2 = new BeardieModelRenderer(this, 0, 0);
+  scope7_2.addShape(0F,0F,0F, new float[][]{{0F, 0F, -0.15F}, {0F, 0F, -0.15F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4.5, 0.15, 0.15);
+  scope7_2.setRotationPoint(3.129244E-07F, -5.899998F, -0.3999997F);
+  scope7_2.setRotation(1.570796F, 0F, 0F);
+
+  scope24 = new BeardieModelRenderer(this, 0, 0);
+  scope24.addShape(0F,0F,0F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.1, 0.15);
+  scope24.setRotationPoint(2.999996F, -6.849998F, 0.4F);
+  scope24.setRotation(0F, 0F, 0F);
+
+  scope25 = new BeardieModelRenderer(this, 0, 0);
+  scope25.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}}, 0.4, 1.1, 0.15);
+  scope25.setRotationPoint(2.999996F, -6.849998F, -0.5499997F);
+  scope25.setRotation(0F, 0F, 0F);
+
+  scope27 = new BeardieModelRenderer(this, 0, 0);
+  scope27.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.1, 0.8);
+  scope27.setRotationPoint(2.999996F, -6.849998F, -0.3999999F);
+  scope27.setRotation(0F, 0F, 0F);
+
+  scope29 = new BeardieModelRenderer(this, 0, 0);
+  scope29.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.3, 0.2, 0.3);
+  scope29.setRotationPoint(2.5F, -6.899998F, -0.15F);
+  scope29.setRotation(0F, 0F, 0F);
+
+  scope30 = new BeardieModelRenderer(this, 0, 0);
+  scope30.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, -0.05F}, {0F, 0F, 0F}, {0F, 0F, -0.05F}, {0F, 0F, 0F}, {0F, 0F, 0.05F}, {0F, 0F, 0F}, {0F, 0F, 0.05F}}, 0.2, 0.1, 0.4);
+  scope30.setRotationPoint(2.449999F, -6.979998F, -0.1999999F);
+  scope30.setRotation(0F, 0F, 0F);
+
+  scope31 = new BeardieModelRenderer(this, 0, 0);
+  scope31.addShape(0F,0F,0F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.1, 0.15);
+  scope31.setRotationPoint(3.8F, -6.849998F, 0.4F);
+  scope31.setRotation(0F, 0F, 0F);
+
+  scope32 = new BeardieModelRenderer(this, 0, 0);
+  scope32.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0.2F, 0F}, {0F, 0.2F, 0F}}, 0.4, 1.1, 0.15);
+  scope32.setRotationPoint(3.8F, -6.849998F, -0.5499997F);
+  scope32.setRotation(0F, 0F, 0F);
+
+  scope33 = new BeardieModelRenderer(this, 0, 0);
+  scope33.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 1.1, 0.8);
+  scope33.setRotationPoint(3.8F, -6.849998F, -0.3999999F);
+  scope33.setRotation(0F, 0F, 0F);
+
+  scope34 = new BeardieModelRenderer(this, 0, 0);
+  scope34.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.4, 0.4, 0.5);
+  scope34.setRotationPoint(3.9F, -6.099998F, 0.15F);
+  scope34.setRotation(0F, 0F, 0F);
+
+  scope35 = new BeardieModelRenderer(this, 0, 0);
+  scope35.addShape(0F,0F,0F, new float[][]{{0F, 0F, -0.05F}, {0F, 0F, 0F}, {0F, 0F, -0.05F}, {0F, 0F, 0F}, {0F, 0F, 0.05F}, {0F, 0F, 0F}, {0F, 0F, 0.05F}, {0F, 0F, 0F}}, 0.2, 0.1, 0.4);
+  scope35.setRotationPoint(2.649998F, -6.979998F, -0.1999999F);
+  scope35.setRotation(0F, 0F, 0F);
+
+  scope36 = new BeardieModelRenderer(this, 0, 0);
+  scope36.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 0.3, 0.3, 0.2);
+  scope36.setRotationPoint(2.5F, -6.449998F, 0.4F);
+  scope36.setRotation(0F, 0F, 0F);
+
+  scope37 = new BeardieModelRenderer(this, 0, 0);
+  scope37.addShape(0F,0F,0F, new float[][]{{0F, 0F, 0F}, {0F, -0.05F, 0F}, {0F, 0F, 0F}, {0F, 0.05F, 0F}, {0F, 0F, 0F}, {0F, -0.05F, 0F}, {0F, 0F, 0F}, {0F, 0.05F, 0F}}, 0.2, 0.4, 0.1);
+  scope37.setRotationPoint(2.449999F, -6.499998F, 0.6F);
+  scope37.setRotation(0F, 0F, 0F);
+
+  scope38 = new BeardieModelRenderer(this, 0, 0);
+  scope38.addShape(0F,0F,0F, new float[][]{{0F, -0.05F, 0F}, {0F, 0F, 0F}, {0F, 0.05F, 0F}, {0F, 0F, 0F}, {0F, -0.05F, 0F}, {0F, 0F, 0F}, {0F, 0.05F, 0F}, {0F, 0F, 0F}}, 0.2, 0.4, 0.1);
+  scope38.setRotationPoint(2.649998F, -6.499998F, 0.6F);
+  scope38.setRotation(0F, 0F, 0F);
+

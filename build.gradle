@@ -1,0 +1,161 @@
+import java.nio.file.Paths
+import java.util.zip.ZipInputStream
+import java.util.zip.ZipOutputStream
+import java.util.zip.ZipEntry
+import java.io.ByteArrayOutputStream
+import java.io.ByteArrayInputStream
+
+buildscript {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        maven { name = "forge";    url = "https://maven.minecraftforge.net" }
+        maven { name = "sonatype"; url = "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url = "https://jitpack.io" }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+    }
+    dependencies {
+        classpath('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') { changing = true }
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
+        classpath 'org.ow2.asm:asm:8.0.1'
+        classpath 'org.ow2.asm:asm-tree:8.0.1'
+        classpath 'net.sf.proguard:proguard-gradle:6.2.2'
+    }
+}
+
+apply plugin: "forge"
+apply plugin: 'idea'
+apply plugin: "com.github.johnrengelman.shadow"
+
+version          = mod_version
+group            = mod_group
+archivesBaseName = mod_id
+
+minecraft {
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir  = "minecraft-debug"
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+[compileJava, compileTestJava]*.options*.encoding = "UTF-8"
+
+configurations {
+    comAnatawa12GradleForgeGradle1_2Separated
+    compile.extendsFrom(shadow)
+}
+
+dependencies {
+    compile fileTree(dir: "deci", includes: ["*.jar"])
+    comAnatawa12GradleForgeGradle1_2Separated('com.anatawa12.forge:separated:1.2-1.1.2-SNAPSHOT') {
+        exclude module: 'asm-debug-all'
+    }
+    comAnatawa12GradleForgeGradle1_2Separated 'org.ow2.asm:asm:8.0.1'
+    comAnatawa12GradleForgeGradle1_2Separated 'org.ow2.asm:asm-tree:8.0.1'
+}
+
+configurations.comAnatawa12GradleForgeGradle1_2Separated {
+    resolutionStrategy {
+        force 'org.ow2.asm:asm:8.0.1'
+        force 'org.ow2.asm:asm-tree:8.0.1'
+        force 'org.ow2.asm:asm-debug-all:8.0.1'
+    }
+}
+
+repositories {
+    maven { url = "https://jitpack.io" }
+    maven { name = "sponge"; url = "https://repo.spongepowered.org/maven/" }
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+    from(sourceSets.main.resources.srcDirs) {
+        include "mcmod.info"
+        expand "version": project.version, "mcversion": project.minecraft.version,
+                "authorlist": project.mod_authors, "modid": project.mod_id,
+                "description": project.mod_description, "name": project.mod_name,
+                "credits": project.mod_credits
+    }
+    from(sourceSets.main.resources.srcDirs) { exclude "mcmod.info" }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+def yourMixinConfig       = 'mixins.revisited.json'
+def refMapForYourConfig   = 'mixins.revisited.refmap.json'
+def relativePathToMixinAP = 'tools/mixin-0.8-SNAPSHOT.jar'
+
+dependencies {
+    shadow('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+        exclude module: 'log4j-core'
+    }
+}
+
+def refMap          = "${tasks.compileJava.temporaryDir}${File.separator}${refMapForYourConfig}"
+def mixinSrg        = "${tasks.reobf.temporaryDir}${File.separator}mixins.srg"
+def stableRefMapDir  = file("${buildDir}/mixin-stable")
+def stableRefMapFile = new File(stableRefMapDir, refMapForYourConfig)
+
+jar {
+    enabled = false
+    dependsOn shadowJar
+}
+
+shadowJar {
+    classifier     = ''
+    configurations = [project.configurations.shadow]
+    from stableRefMapDir
+    manifest {
+        attributes(
+                'FMLAT'                      : 'nowhere.cfg',
+                'MixinConfigs'               : yourMixinConfig,
+                'FMLCorePluginContainsFMLMod': true,
+                'ForceLoadAsMod'             : true,
+                'FMLCorePlugin'              : "net.zimi.revisited.mixin.CorePlugin",
+                'TweakClass'                 : 'org.spongepowered.asm.launch.MixinTweaker'
+        )
+    }
+}
+
+afterEvaluate {
+    def fixedRelPathToAP = relativePathToMixinAP
+    if (fixedRelPathToAP.startsWith('./') || fixedRelPathToAP.startsWith('.\\'))
+        fixedRelPathToAP = fixedRelPathToAP.substring(2)
+    else if (fixedRelPathToAP.startsWith('/') || fixedRelPathToAP.startsWith('\\'))
+        fixedRelPathToAP = fixedRelPathToAP.substring(1)
+
+    tasks.compileJava {
+        options.compilerArgs += [
+                "-XDenableSunApiLintControl", "-XDignore.symbol.file",
+                "-processor",
+                "org.spongepowered.tools.obfuscation.MixinObfuscationProcessorInjection," +
+                        "org.spongepowered.tools.obfuscation.MixinObfuscationProcessorTargets",
+                "-AreobfSrgFile=${tasks.reobf.srg}",
+                "-AoutSrgFile=${mixinSrg}",
+                "-AoutRefMapFile=${refMap}"
+        ]
+        options.annotationProcessorPath = files(projectDir.absolutePath + '/' + fixedRelPathToAP)
+    }
+
+    tasks.compileJava.doLast {
+        def src = file(refMap)
+        if (src.exists()) {
+            stableRefMapDir.mkdirs()
+            ant.copy(file: src.absolutePath, tofile: stableRefMapFile.absolutePath, overwrite: true)
+        }
+    }
+}
+
+sourceSets { main { ext.refMap = refMapForYourConfig } }
+
+runClient {
+    args("--mods=" + Paths.get("$projectDir")
+            .resolve(minecraft.runDir).normalize()
+            .relativize(shadowJar.archivePath.toPath()))
+}
+
+tasks.withType(AbstractCopyTask).each { it.duplicatesStrategy = DuplicatesStrategy.INCLUDE }

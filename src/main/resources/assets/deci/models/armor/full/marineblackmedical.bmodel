@@ -1,0 +1,375 @@
+
+
+  flamePos: 20, -5, 0;
+  ejectPos: 0, 0, 0;
+  rhPos: -8.999995, 0.72, -2;
+  rhRot: 0, 0, 0;
+  lhPos: 6.499999, 7.119998, 3.420001;
+  lhRot: 0, 0, 0;
+  textureWidth = 128;
+  textureHeight = 128;
+  headModel0 = new BeardieModelRenderer(this, 49, 1);
+  headModel0.addShape(-5F,-7F,-5F, new float[][]{{0F, -0.5F, 0F}, {0F, -0.5F, 0F}, {-0.5F, 0F, -0.5F}, {0.5F, 0F, -0.5F}, {0F, -0.5F, 0.4F}, {0F, -0.5F, 0.4F}, {-0.5F, 0F, 0.5F}, {0.5F, 0F, 0.5F}}, 10, 3, 10);
+  headModel0.setRotationPoint(0F, 0F, 0F);
+  headModel0.setRotation(0F, 0F, 0F);
+
+  headModel1 = new BeardieModelRenderer(this, 81, 9);
+  headModel1.addShape(-5F,-9F,-5F, new float[][]{{-0.5F, 0F, -0.5F}, {0.5F, 0F, -0.5F}, {-1.5F, 0F, -1.5F}, {1.5F, 0F, -1.5F}, {-0.5F, 0F, 0.5F}, {0.5F, 0F, 0.5F}, {-1.5F, 0F, 1.5F}, {1.5F, 0F, 1.5F}}, 10, 2, 10);
+  headModel1.setRotationPoint(0F, 0F, 0F);
+  headModel1.setRotation(0F, 0F, 0F);
+
+  headModel2 = new BeardieModelRenderer(this, 25, 1);
+  headModel2.addShape(-5F,-4.5F,-4F, new float[][]{{-0.25F, -0.3F, 0F}, {-0.25F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {-0.25F, -0.3F, 2F}, {-0.25F, -0.3F, 2F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 1, 1, 2);
+  headModel2.setRotationPoint(0F, 0F, 0F);
+  headModel2.setRotation(0F, 0F, 0F);
+
+  headModel3 = new BeardieModelRenderer(this, 81, 1);
+  headModel3.addShape(-5.5F,-4.5F,-2F, new float[][]{{0F, 0.3F, 0F}, {0F, 0.3F, 0F}, {0.5F, 0F, 0F}, {0.5F, 0F, 0F}, {0.25F, -1.3F, 0F}, {0.25F, -1.3F, 0F}, {0.5F, 0F, 0F}, {0.5F, 0F, 0F}}, 1, 2, 2);
+  headModel3.setRotationPoint(0F, 0F, 0F);
+  headModel3.setRotation(0F, 0F, 0F);
+
+  headModel4 = new BeardieModelRenderer(this, 89, 1);
+  headModel4.addShape(-5F,-4.5F,0F, new float[][]{{0F, -0.3F, 0F}, {0F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {-0.5F, 0.3F, 0F}, {-0.5F, 0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 1, 2, 5);
+  headModel4.setRotationPoint(0F, 0F, 0F);
+  headModel4.setRotation(0F, 0F, 0F);
+
+  headModel5 = new BeardieModelRenderer(this, 97, 1);
+  headModel5.addShape(4F,-4.5F,-4F, new float[][]{{0.25F, -0.3F, 0F}, {0.25F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0.25F, -0.3F, 2F}, {0.25F, -0.3F, 2F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 1, 1, 2);
+  headModel5.setRotationPoint(0F, 0F, 0F);
+  headModel5.setRotation(0F, 0F, 0F);
+
+  headModel6 = new BeardieModelRenderer(this, 105, 1);
+  headModel6.addShape(3.5F,-4.5F,-2F, new float[][]{{1F, 0.3F, 0F}, {1F, 0.3F, 0F}, {0.5F, 0F, 0F}, {0.5F, 0F, 0F}, {0.75F, -1.3F, 0F}, {0.75F, -1.3F, 0F}, {0.5F, 0F, 0F}, {0.5F, 0F, 0F}}, 1, 2, 2);
+  headModel6.setRotationPoint(0F, 0F, 0F);
+  headModel6.setRotation(0F, 0F, 0F);
+
+  headModel7 = new BeardieModelRenderer(this, 113, 1);
+  headModel7.addShape(4F,-4.5F,0F, new float[][]{{0F, -0.3F, 0F}, {0F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0.5F, 0.3F, 0F}, {0.5F, 0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 1, 2, 5);
+  headModel7.setRotationPoint(0F, 0F, 0F);
+  headModel7.setRotation(0F, 0F, 0F);
+
+  headModel8 = new BeardieModelRenderer(this, 1, 17);
+  headModel8.addShape(-4F,-4.5F,4F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 8, 1, 1);
+  headModel8.setRotationPoint(0F, 0F, 0F);
+  headModel8.setRotation(0F, 0F, 0F);
+
+  headModel9 = new BeardieModelRenderer(this, 113, 9);
+  headModel9.addShape(-4F,-3.5F,4F, new float[][]{{0F, -0.7F, 0F}, {0F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.7F, 0F}, {0F, -0.3F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4, 1, 1);
+  headModel9.setRotationPoint(0F, 0F, 0F);
+  headModel9.setRotation(0F, 0F, 0F);
+
+  headModel10 = new BeardieModelRenderer(this, 25, 17);
+  headModel10.addShape(0F,-3.5F,4F, new float[][]{{0F, -0.3F, 0F}, {0F, -0.7F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.3F, 0F}, {0F, -0.7F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 4, 1, 1);
+  headModel10.setRotationPoint(0F, 0F, 0F);
+  headModel10.setRotation(0F, 0F, 0F);
+
+  headModel11 = new BeardieModelRenderer(this, 33, 17);
+  headModel11.addShape(-5F,-6F,-5F, new float[][]{{-0.1F, -0.2F, -0.1F}, {0.1F, -0.2F, -0.1F}, {-0.2F, 0.2F, -0.2F}, {0.2F, 0.2F, -0.2F}, {-0.2F, -0.5F, 0.4F}, {0.2F, -0.5F, 0.4F}, {-0.3F, 0F, 0.4F}, {0.3F, 0F, 0.4F}}, 10, 1, 10);
+  headModel11.setRotationPoint(0F, 0F, 0F);
+  headModel11.setRotation(0F, 0F, 0F);
+
+  headModel12 = new BeardieModelRenderer(this, 1, 25);
+  headModel12.addShape(-4.5F,-4F,-4.5F, new float[][]{{-0.4F, 0F, -2.5F}, {0.4F, 0F, -2.5F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {-0.4F, 0F, 0.5F}, {0.4F, 0F, 0.5F}, {0F, 0F, 3F}, {0F, 0F, 3F}}, 9, 4, 4);
+  headModel12.setRotationPoint(0F, 0F, 0F);
+  headModel12.setRotation(0F, 0F, 0F);
+
+  headModel13 = new BeardieModelRenderer(this, 73, 49);
+  headModel13.addShape(-4.5F,0F,-4F, new float[][]{{-0.6F, -0.8F, 0F}, {0.6F, -0.8F, 0F}, {-0.4F, 0F, 0F}, {0.4F, 0F, 0F}, {-0.6F, -0.8F, 0F}, {0.6F, -0.8F, 0F}, {-0.4F, 0F, 0F}, {0.4F, 0F, 0F}}, 9, 1, 1);
+  headModel13.setRotationPoint(0F, 0F, 0F);
+  headModel13.setRotation(0F, 0F, 0F);
+
+  headModel14 = new BeardieModelRenderer(this, 49, 65);
+  headModel14.addShape(-5F,-5.5F,-5.6F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {-0.1F, 0.5F, 0.02F}, {0.1F, 0.5F, 0.02F}, {0F, 0F, 0.4F}, {0F, 0F, 0.4F}, {-0.1F, 0.5F, 1.02F}, {0.1F, 0.5F, 1.02F}}, 10, 1, 1);
+  headModel14.setRotationPoint(0F, 0F, 0F);
+  headModel14.setRotation(0F, 0F, 0F);
+
+  headModel15 = new BeardieModelRenderer(this, 65, 65);
+  headModel15.addShape(-5F,-7.2F,-5F, new float[][]{{-0.1F, 0.2F, -0.1F}, {0.1F, 0.2F, -0.1F}, {-0.4F, 0.2F, -0.4F}, {0.4F, 0.2F, -0.4F}, {-0.2F, 0F, 0.4F}, {0.2F, 0F, 0.4F}, {-0.4F, 0F, 0.5F}, {0.4F, 0F, 0.5F}}, 10, 1, 10);
+  headModel15.setRotationPoint(0F, 0F, 0F);
+  headModel15.setRotation(0F, 0F, 0F);
+
+  headModel16 = new BeardieModelRenderer(this, 89, 25);
+  headModel16.addShape(1F,-7.75F,-5.3F, new float[][]{{0F, 0F, 0F}, {0F, 0.3F, 0F}, {0F, 0F, 0.3F}, {0F, -0.3F, 0.3F}, {0F, 0F, 0F}, {0F, 0.3F, 0F}, {0F, 0F, 0.3F}, {0F, -0.3F, 0.3F}}, 3, 2, 1);
+  headModel16.setRotationPoint(0F, 0F, 0F);
+  headModel16.setRotation(0F, 0F, 0F);
+
+  headModel17 = new BeardieModelRenderer(this, 41, 33);
+  headModel17.addShape(-4F,-7.75F,-5.3F, new float[][]{{0F, 0.3F, 0F}, {0F, 0F, 0F}, {0F, -0.3F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0.3F, 0F}, {0F, 0F, 0F}, {0F, -0.3F, 0.3F}, {0F, 0F, 0.3F}}, 3, 2, 1);
+  headModel17.setRotationPoint(0F, 0F, 0F);
+  headModel17.setRotation(0F, 0F, 0F);
+
+  headModel18 = new BeardieModelRenderer(this, 25, 25);
+  headModel18.addShape(-1F,-7.75F,-5.3F, new float[][]{{0F, 0.3F, 0F}, {0F, 0.3F, 0F}, {0F, -0.3F, 0.3F}, {0F, -0.3F, 0.3F}, {0F, 0.3F, 0F}, {0F, 0.3F, 0F}, {0F, -0.3F, 0.3F}, {0F, -0.3F, 0.3F}}, 2, 2, 1);
+  headModel18.setRotationPoint(0F, 0F, 0F);
+  headModel18.setRotation(0F, 0F, 0F);
+
+  headModel19 = new BeardieModelRenderer(this, 113, 25);
+  headModel19.addShape(-1F,-5.5F,-5.6F, new float[][]{{-0.35F, -0.25F, 0F}, {0.35F, -0.25F, 0F}, {-0.35F, 0F, 0F}, {0.35F, 0F, 0F}, {-0.35F, -0.6F, 0F}, {0.35F, -0.6F, 0F}, {-0.35F, -0.2F, 0F}, {0.35F, -0.2F, 0F}}, 2, 1, 1);
+  headModel19.setRotationPoint(0F, 0F, 0F);
+  headModel19.setRotation(0F, 0F, 0F);
+
+  headModel20 = new BeardieModelRenderer(this, 65, 33);
+  headModel20.addShape(-1F,-7F,-5.6F, new float[][]{{-0.35F, 0.35F, -0.8F}, {0.35F, 0.35F, -0.8F}, {-0.35F, 0F, -0.5F}, {0.35F, 0F, -0.5F}, {-0.35F, 0.3F, 0F}, {0.35F, 0.3F, 0F}, {-0.35F, 0F, 0.3F}, {0.35F, 0F, 0.3F}}, 2, 1, 1);
+  headModel20.setRotationPoint(0F, 0F, 0F);
+  headModel20.setRotation(0F, 0F, 0F);
+
+  headModel21 = new BeardieModelRenderer(this, 121, 41);
+  headModel21.addShape(-1F,-8.2F,-5.6F, new float[][]{{-0.35F, 0.5F, -0.6F}, {0.35F, 0.5F, -0.6F}, {-0.35F, 0F, 0F}, {0.35F, 0F, 0F}, {-0.35F, 0.2F, -0.2F}, {0.35F, 0.2F, -0.2F}, {-0.35F, -0.2F, 0.5F}, {0.35F, -0.2F, 0.5F}}, 2, 1, 1);
+  headModel21.setRotationPoint(0F, 0F, 0F);
+  headModel21.setRotation(0F, 0F, 0F);
+
+  bodyModel0 = new BeardieModelRenderer(this, 1, 1);
+  bodyModel0.addShape(-4F,7F,-2F, new float[][]{{0.3F, 0F, 0.3F}, {-0.3F, 0F, 0.3F}, {0.3F, -0.2F, 0.3F}, {-0.3F, -0.2F, 0.3F}, {0.3F, 0F, -0.3F}, {-0.3F, 0F, -0.3F}, {0.3F, -0.2F, -0.3F}, {-0.3F, -0.2F, -0.3F}}, 8, 4, 4);
+  bodyModel0.setRotationPoint(0F, 0F, 0F);
+  bodyModel0.setRotation(0F, 0F, 0F);
+
+  bodyModel1 = new BeardieModelRenderer(this, 33, 1);
+  bodyModel1.addShape(-4F,2.8F,-2F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {-0.3F, 0F, 0.3F}, {0.3F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {-0.3F, 0F, -0.3F}, {0.3F, 0F, -0.3F}}, 8, 4, 4);
+  bodyModel1.setRotationPoint(0F, 0F, 0F);
+  bodyModel1.setRotation(0F, 0F, 0F);
+
+  bodyModel2 = new BeardieModelRenderer(this, 73, 25);
+  bodyModel2.addShape(-4F,-0.2F,-2F, new float[][]{{0F, 0F, 0.3F}, {0.3F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0.3F, 0F, -0.3F}, {0F, 0.7F, -0.3F}, {0F, 0F, -0.3F}}, 4, 3, 4);
+  bodyModel2.setRotationPoint(0F, 0F, 0F);
+  bodyModel2.setRotation(0F, 0F, 0F);
+
+  bodyModel3 = new BeardieModelRenderer(this, 97, 25);
+  bodyModel3.addShape(0F,-0.2F,-2F, new float[][]{{-0.3F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {-0.3F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0.7F, -0.3F}}, 4, 3, 4);
+  bodyModel3.setRotationPoint(0F, 0F, 0F);
+  bodyModel3.setRotation(0F, 0F, 0F);
+
+  bodyModel4 = new BeardieModelRenderer(this, 73, 33);
+  bodyModel4.addShape(-3.5F,1F,-2.6F, new float[][]{{0.5F, 0.5F, 0.5F}, {-0.5F, 0.5F, 0.5F}, {0.5F, -0.5F, 0.5F}, {-0.5F, -0.5F, 0.5F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 9, 1);
+  bodyModel4.setRotationPoint(0F, 0F, 0F);
+  bodyModel4.setRotation(0F, 0F, 0F);
+
+  bodyModel5 = new BeardieModelRenderer(this, 97, 33);
+  bodyModel5.addShape(-3.5F,1.1F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel5.setRotationPoint(0F, 0F, 0F);
+  bodyModel5.setRotation(0F, 0F, 0F);
+
+  bodyModel6 = new BeardieModelRenderer(this, 1, 41);
+  bodyModel6.addShape(-3.5F,2.7F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel6.setRotationPoint(0F, 0F, 0F);
+  bodyModel6.setRotation(0F, 0F, 0F);
+
+  bodyModel7 = new BeardieModelRenderer(this, 97, 41);
+  bodyModel7.addShape(-3.5F,4.3F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel7.setRotationPoint(0F, 0F, 0F);
+  bodyModel7.setRotation(0F, 0F, 0F);
+
+  bodyModel8 = new BeardieModelRenderer(this, 1, 49);
+  bodyModel8.addShape(-3.5F,5.9F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel8.setRotationPoint(0F, 0F, 0F);
+  bodyModel8.setRotation(0F, 0F, 0F);
+
+  bodyModel9 = new BeardieModelRenderer(this, 25, 49);
+  bodyModel9.addShape(-3.5F,7.5F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel9.setRotationPoint(0F, 0F, 0F);
+  bodyModel9.setRotation(0F, 0F, 0F);
+
+  bodyModel10 = new BeardieModelRenderer(this, 49, 49);
+  bodyModel10.addShape(-3.5F,9.1F,-2.7F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel10.setRotationPoint(0F, 0F, 0F);
+  bodyModel10.setRotation(0F, 0F, 0F);
+
+  bodyModel11 = new BeardieModelRenderer(this, 65, 17);
+  bodyModel11.addShape(-2.5F,11.2F,-2.3F, new float[][]{{0.3F, 0F, -0.8F}, {-0.3F, 0F, -0.8F}, {0.3F, -0.2F, -0.8F}, {-0.3F, -0.2F, -0.8F}, {0.3F, 0F, 0F}, {-0.3F, 0F, 0F}, {0.3F, -0.2F, 0F}, {-0.3F, -0.2F, 0F}}, 5, 1, 1);
+  bodyModel11.setRotationPoint(0F, 0F, 0F);
+  bodyModel11.setRotation(0F, 0F, 0F);
+
+  bodyModel12 = new BeardieModelRenderer(this, 25, 9);
+  bodyModel12.addShape(1.2F,6F,-3.4F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 2, 4, 1);
+  bodyModel12.setRotationPoint(0F, 0F, 0F);
+  bodyModel12.setRotation(0F, 0F, 0F);
+
+  bodyModel13 = new BeardieModelRenderer(this, 121, 25);
+  bodyModel13.addShape(-1F,6F,-3.4F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 2, 4, 1);
+  bodyModel13.setRotationPoint(0F, 0F, 0F);
+  bodyModel13.setRotation(0F, 0F, 0F);
+
+  bodyModel14 = new BeardieModelRenderer(this, 121, 33);
+  bodyModel14.addShape(-3.2F,6F,-3.4F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 2, 4, 1);
+  bodyModel14.setRotationPoint(0F, 0F, 0F);
+  bodyModel14.setRotation(0F, 0F, 0F);
+
+  bodyModel15 = new BeardieModelRenderer(this, 89, 1);
+  bodyModel15.addShape(1.8F,2F,-2.8F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 1, 3, 1);
+  bodyModel15.setRotationPoint(0F, 0F, 0F);
+  bodyModel15.setRotation(0F, 0F, 0F);
+
+  bodyModel16 = new BeardieModelRenderer(this, 97, 49);
+  bodyModel16.addShape(-3.5F,1F,1.5F, new float[][]{{0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0.5F, 0.5F, -0.5F}, {-0.5F, 0.5F, -0.5F}, {0.5F, -0.5F, -0.5F}, {-0.5F, -0.5F, -0.5F}}, 7, 9, 1);
+  bodyModel16.setRotationPoint(0F, 0F, 0F);
+  bodyModel16.setRotation(0F, 0F, 0F);
+
+  bodyModel17 = new BeardieModelRenderer(this, 1, 57);
+  bodyModel17.addShape(-3.5F,4.3F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel17.setRotationPoint(0F, 0F, 0F);
+  bodyModel17.setRotation(0F, 0F, 0F);
+
+  bodyModel18 = new BeardieModelRenderer(this, 25, 57);
+  bodyModel18.addShape(-3.5F,2.7F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel18.setRotationPoint(0F, 0F, 0F);
+  bodyModel18.setRotation(0F, 0F, 0F);
+
+  bodyModel19 = new BeardieModelRenderer(this, 49, 57);
+  bodyModel19.addShape(-3.5F,1.1F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel19.setRotationPoint(0F, 0F, 0F);
+  bodyModel19.setRotation(0F, 0F, 0F);
+
+  bodyModel20 = new BeardieModelRenderer(this, 73, 57);
+  bodyModel20.addShape(-3.5F,5.9F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel20.setRotationPoint(0F, 0F, 0F);
+  bodyModel20.setRotation(0F, 0F, 0F);
+
+  bodyModel21 = new BeardieModelRenderer(this, 1, 65);
+  bodyModel21.addShape(-3.5F,7.5F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel21.setRotationPoint(0F, 0F, 0F);
+  bodyModel21.setRotation(0F, 0F, 0F);
+
+  bodyModel22 = new BeardieModelRenderer(this, 25, 65);
+  bodyModel22.addShape(-3.5F,9.1F,1.6F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 7, 1, 1);
+  bodyModel22.setRotationPoint(0F, 0F, 0F);
+  bodyModel22.setRotation(0F, 0F, 0F);
+
+  bodyModel23 = new BeardieModelRenderer(this, 113, 1);
+  bodyModel23.addShape(0.6F,2F,-2.8F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 1, 3, 1);
+  bodyModel23.setRotationPoint(0F, 0F, 0F);
+  bodyModel23.setRotation(0F, 0F, 0F);
+
+  bodyModel24 = new BeardieModelRenderer(this, 121, 1);
+  bodyModel24.addShape(-3F,3F,-2.8F, new float[][]{{0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, 0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}, {0F, 0F, -0.3F}}, 2, 2, 1);
+  bodyModel24.setRotationPoint(0F, 0F, 0F);
+  bodyModel24.setRotation(0F, 0F, 0F);
+
+  bodyModel25 = new BeardieModelRenderer(this, 121, 49);
+  bodyModel25.addShape(-3.2F,5.9F,-3.6F, new float[][]{{0.05F, -0.5F, 0.3F}, {-0.05F, -0.5F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, -0.5F, -0.3F}, {-0.05F, -0.5F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 2, 2, 1);
+  bodyModel25.setRotationPoint(0F, 0F, 0F);
+  bodyModel25.setRotation(0F, 0F, 0F);
+
+  bodyModel26 = new BeardieModelRenderer(this, 121, 57);
+  bodyModel26.addShape(-1F,5.9F,-3.6F, new float[][]{{0.05F, -0.5F, 0.3F}, {-0.05F, -0.5F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, -0.5F, -0.3F}, {-0.05F, -0.5F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 2, 2, 1);
+  bodyModel26.setRotationPoint(0F, 0F, 0F);
+  bodyModel26.setRotation(0F, 0F, 0F);
+
+  bodyModel27 = new BeardieModelRenderer(this, 97, 65);
+  bodyModel27.addShape(1.2F,5.9F,-3.6F, new float[][]{{0.05F, -0.5F, 0.3F}, {-0.05F, -0.5F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, -0.5F, -0.3F}, {-0.05F, -0.5F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 2, 2, 1);
+  bodyModel27.setRotationPoint(0F, 0F, 0F);
+  bodyModel27.setRotation(0F, 0F, 0F);
+
+  bodyModel28 = new BeardieModelRenderer(this, 105, 65);
+  bodyModel28.addShape(-3F,2.9F,-2.9F, new float[][]{{0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 2, 1, 1);
+  bodyModel28.setRotationPoint(0F, 0F, 0F);
+  bodyModel28.setRotation(0F, 0F, 0F);
+
+  bodyModel29 = new BeardieModelRenderer(this, 113, 65);
+  bodyModel29.addShape(0.6F,1.9F,-2.9F, new float[][]{{0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 1, 1, 1);
+  bodyModel29.setRotationPoint(0F, 0F, 0F);
+  bodyModel29.setRotation(0F, 0F, 0F);
+
+  bodyModel30 = new BeardieModelRenderer(this, 121, 65);
+  bodyModel30.addShape(1.8F,1.9F,-2.9F, new float[][]{{0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, 0.3F}, {-0.05F, 0F, 0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}, {0.05F, 0F, -0.3F}, {-0.05F, 0F, -0.3F}}, 1, 1, 1);
+  bodyModel30.setRotationPoint(0F, 0F, 0F);
+  bodyModel30.setRotation(0F, 0F, 0F);
+
+  bodyModel31 = new BeardieModelRenderer(this, 1, 73);
+  bodyModel31.addShape(-2F,1F,2.3F, new float[][]{{-0.25F, -0.25F, 0F}, {0.25F, -0.25F, 0F}, {-0.25F, 0.25F, 0F}, {0.25F, 0.25F, 0F}, {-0.2F, -0.2F, 0F}, {0.2F, -0.2F, 0F}, {-0.2F, 0.2F, 0F}, {0.2F, 0.2F, 0F}}, 4, 9, 1);
+  bodyModel31.setRotationPoint(0F, 0F, 0F);
+  bodyModel31.setRotation(0F, 0F, 0F);
+
+  bodyModel32 = new BeardieModelRenderer(this, 17, 73);
+  bodyModel32.addShape(-1.5F,7.5F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel32.setRotationPoint(0F, 0F, 0F);
+  bodyModel32.setRotation(0F, 0F, 0F);
+
+  bodyModel33 = new BeardieModelRenderer(this, 33, 73);
+  bodyModel33.addShape(-1.5F,5.9F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel33.setRotationPoint(0F, 0F, 0F);
+  bodyModel33.setRotation(0F, 0F, 0F);
+
+  bodyModel34 = new BeardieModelRenderer(this, 49, 73);
+  bodyModel34.addShape(-1.5F,4.3F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel34.setRotationPoint(0F, 0F, 0F);
+  bodyModel34.setRotation(0F, 0F, 0F);
+
+  bodyModel35 = new BeardieModelRenderer(this, 113, 73);
+  bodyModel35.addShape(-1.5F,2.7F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel35.setRotationPoint(0F, 0F, 0F);
+  bodyModel35.setRotation(0F, 0F, 0F);
+
+  bodyModel36 = new BeardieModelRenderer(this, 17, 81);
+  bodyModel36.addShape(-1.5F,1.25F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel36.setRotationPoint(0F, 0F, 0F);
+  bodyModel36.setRotation(0F, 0F, 0F);
+
+  bodyModel37 = new BeardieModelRenderer(this, 33, 81);
+  bodyModel37.addShape(-1.5F,8.95F,2.35F, new float[][]{{0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}, {0F, -0.2F, 0F}, {0F, -0.2F, 0F}, {0F, 0F, 0F}, {0F, 0F, 0F}}, 3, 1, 1);
+  bodyModel37.setRotationPoint(0F, 0F, 0F);
+  bodyModel37.setRotation(0F, 0F, 0F);
+
+  bodyModel38 = new BeardieModelRenderer(this, 41, 81);
+  bodyModel38.addShape(-4F,1.9F,-2F, new float[][]{{0.1F, 0.1F, 0.1F}, {-0.1F, 0.1F, 0.1F}, {0.1F, -0.5F, 0.1F}, {-0.1F, -0.5F, 0.1F}, {0.1F, 0.1F, -0.1F}, {-0.1F, 0.1F, -0.1F}, {0.1F, -0.5F, -0.1F}, {-0.1F, -0.5F, -0.1F}}, 8, 10, 4);
+  bodyModel38.setRotationPoint(0F, 0F, 0F);
+  bodyModel38.setRotation(0F, 0F, 0F);
+
+  bodyModel39 = new BeardieModelRenderer(this, 73, 81);
+  bodyModel39.addShape(-4F,-0.1F,-2F, new float[][]{{0F, -0.5F, 0.1F}, {-0.1F, -0.5F, 0.1F}, {0F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0F, -0.5F, -0.1F}, {-0.1F, -0.5F, -0.1F}, {-1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 2, 4);
+  bodyModel39.setRotationPoint(0F, 0F, 0F);
+  bodyModel39.setRotation(0F, 0F, 0F);
+
+  bodyModel40 = new BeardieModelRenderer(this, 97, 81);
+  bodyModel40.addShape(0F,-0.1F,-2F, new float[][]{{0.1F, -0.5F, 0.1F}, {0F, -0.5F, 0.1F}, {0.1F, 0F, 0.1F}, {0F, 0F, 0.1F}, {0.1F, -0.5F, -0.1F}, {0F, -0.5F, -0.1F}, {0.1F, 0F, -0.1F}, {1F, 0F, -0.1F}}, 4, 2, 4);
+  bodyModel40.setRotationPoint(0F, 0F, 0F);
+  bodyModel40.setRotation(0F, 0F, 0F);
+
+  leftArmModel0 = new BeardieModelRenderer(this, 25, 97);
+  leftArmModel0.addShape(-1F,-2.1F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 9, 4);
+  leftArmModel0.setRotationPoint(0F, 0F, 0F);
+  leftArmModel0.setRotation(0F, 0F, 0F);
+
+  leftArmModel1 = new BeardieModelRenderer(this, 1, 105);
+  leftArmModel1.addShape(-1F,6.5F,-2F, new float[][]{{0.15F, -0.5F, 0.15F}, {-0.15F, -0.5F, 0.15F}, {0.15F, 0F, 0.15F}, {-0.15F, 0F, 0.15F}, {0.15F, -0.5F, -0.15F}, {-0.15F, -0.5F, -0.15F}, {0.15F, 0F, -0.15F}, {-0.15F, 0F, -0.15F}}, 4, 2, 4);
+  leftArmModel1.setRotationPoint(0F, 0F, 0F);
+  leftArmModel1.setRotation(0F, 0F, 0F);
+
+  rightArmModel0 = new BeardieModelRenderer(this, 1, 89);
+  rightArmModel0.addShape(-3F,-2.1F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 9, 4);
+  rightArmModel0.setRotationPoint(0F, 0F, 0F);
+  rightArmModel0.setRotation(0F, 0F, 0F);
+
+  rightArmModel1 = new BeardieModelRenderer(this, 49, 97);
+  rightArmModel1.addShape(-3F,6.5F,-2F, new float[][]{{0.15F, -0.5F, 0.15F}, {-0.15F, -0.5F, 0.15F}, {0.15F, 0F, 0.15F}, {-0.15F, 0F, 0.15F}, {0.15F, -0.5F, -0.15F}, {-0.15F, -0.5F, -0.15F}, {0.15F, 0F, -0.15F}, {-0.15F, 0F, -0.15F}}, 4, 2, 4);
+  rightArmModel1.setRotationPoint(0F, 0F, 0F);
+  rightArmModel1.setRotation(0F, 0F, 0F);
+
+  leftBootModel0 = new BeardieModelRenderer(this, 25, 33);
+  leftBootModel0.addShape(-2F,1F,-2.3F, new float[][]{{0.4F, 0F, -0.4F}, {-0.4F, 0F, -0.4F}, {0.4F, 0F, -0.4F}, {-0.4F, 0F, -0.4F}, {0.4F, 0F, 0F}, {-0.4F, 0F, 0F}, {0.4F, 0F, 0F}, {-0.4F, 0F, 0F}}, 4, 5, 5);
+  leftBootModel0.setRotationPoint(0F, 6F, 0F);
+  leftBootModel0.setRotation(0F, 0F, 0F);
+
+  leftLegModel1 = new BeardieModelRenderer(this, 97, 89);
+  leftLegModel1.addShape(-2F,-0.0999999999999996F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 6, 4);
+  leftLegModel1.setRotationPoint(0F, 0F, 0F);
+  leftLegModel1.setRotation(0F, 0F, 0F);
+
+  leftLegModel2 = new BeardieModelRenderer(this, 97, 89);
+  leftLegModel2.addShape(-2F,-0.0999999999999996F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 4, 4);
+  leftLegModel2.setRotationPoint(0F, 6F, 0F);
+  leftLegModel2.setRotation(0F, 0F, 0F);
+
+  rightBootModel0 = new BeardieModelRenderer(this, 49, 33);
+  rightBootModel0.addShape(-2F,1F,-2.3F, new float[][]{{0.4F, 0F, -0.4F}, {-0.4F, 0F, -0.4F}, {0.4F, 0F, -0.4F}, {-0.4F, 0F, -0.4F}, {0.4F, 0F, 0F}, {-0.4F, 0F, 0F}, {0.4F, 0F, 0F}, {-0.4F, 0F, 0F}}, 4, 5, 5);
+  rightBootModel0.setRotationPoint(0F, 6F, 0F);
+  rightBootModel0.setRotation(0F, 0F, 0F);
+
+  rightLegModel1 = new BeardieModelRenderer(this, 73, 89);
+  rightLegModel1.addShape(-2F,-0.0999999999999996F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 6, 4);
+  rightLegModel1.setRotationPoint(0F, 0F, 0F);
+  rightLegModel1.setRotation(0F, 0F, 0F);
+
+  rightLegModel2 = new BeardieModelRenderer(this, 73, 89);
+  rightLegModel2.addShape(-2F,-0.0999999999999996F,-2F, new float[][]{{0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, 0.1F}, {-0.1F, 0F, 0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}, {0.1F, 0F, -0.1F}, {-0.1F, 0F, -0.1F}}, 4, 4, 4);
+  rightLegModel2.setRotationPoint(0F, 6F, 0F);
+  rightLegModel2.setRotation(0F, 0F, 0F);
+
